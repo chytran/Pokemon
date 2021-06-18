@@ -6,33 +6,35 @@ var api = {
 // Variables
 const container = document.querySelector(".container");
 
-// Fetch Pokemon
+// Loop to get multiple pokemon
 const fetchPokemon = async () => {
     for (let i = 1; i <= 30; i++){
         await getPokemon(i);
     }
 }
 
-// Get pokemon on search
-const getPokemon = async id => {
+// Get Pokemon through API
+const getPokemon = async (id) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-    const res = await fetch(url)
-    const pokemon = await res.json();
-    pokiCard(pokemon);
+    const res = await fetch(url);
+    const data = await res.json();
+    pokeCard(data);
 }
 
-// Create pokemon information
-function pokiCard(pokemon) {
-    const pokeEl = document.createElement("div");
-    pokeEl.classList.add("pokiCard");
+// Place information into container to display
+function pokeCard(pokemon){
+    const pokeContainer = document.createElement("div");
+    pokeContainer.classList.add("pokemon");
 
-    const pokiInfo = `
+    const poke = `
         ${pokemon.id}
     `;
 
-    pokeEl.innerHTML = pokiInfo;
+    pokeContainer.innerHTML = poke;
 
-    container.appendChild(pokeEl);
+    container.appendChild(pokeContainer);
 }
 
+// Fetch Pokemon
+fetchPokemon();
 
