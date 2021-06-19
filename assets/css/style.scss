@@ -6,13 +6,73 @@
 $mainWhite: #FFF;
 $mainBlack: #121212;
 
+// Header
 $headerHeight: 3rem;
 
+/*============= Fonts and Typography ===========*/
+$bodyFont: "Open Sans", sans-serif;
+$titleFont: "Raleway", sans-serif;
+$biggestFontSize: 2.5rem;
+$h1FontSize: 1.5rem;
+$h2FontSize: 1.25rem;
+$h3FontSize: 1rem;
+$normalFontSize: 0.938rem;
+$smallFontSize: 0.813rem;
+$smallerFontSize: 0.75rem;
+
+/*============= Font weight ===================*/
+$fontMedium: 500;
+$fontSemiBold: 600;
+$fontBold: 700;
+
+/*============= Margin ==================*/
+$mb025: 0.25rem;
+$mb05: 0.5rem;
+$mb075: 0.75rem;
+$mb1: 1rem;
+$mb125: 1.25rem;
+$mb15: 1.5rem;
+$mb2: 2rem;
+$mb25: 2.5rem;
+
+/*============================== Z Index ==================================*/
+$zToolTip: 10;
+$zFixed: 100;
+
+/*============================== Hover overlay ====================================*/
+$imgTransition: 0.3s;
+$imgHidden: hidden;
+$imgScale: scale(1.1);
+
+// Media
+@media screen and (min-width: 968px){
+    $biggestFontSize: 4rem;
+    $h1FontSize: 2.25rem;
+    $h2FontSize: 1.75rem;
+    $h3FontSize: 1.25rem;
+    $normalFontSize: 1rem;
+    $smallFontSize: 0.875rem;
+    $smallerFontSize: 0.813rem;
+}
+
+/*======================= BASE ===========================*/
 
 *, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: $headerHeight 0 0 0;
+    font-family: $bodyFont;
+    font-size: $bodyFont;
+    background-color: $mainWhite;
+    color: $mainBlack;
 }
 
 ul {
