@@ -28,6 +28,40 @@ function pokeCard(pokemon){
     pokeContainer.classList.add("pokemon");
 
     const poke = `
+        <h2 class="pokeID">${pokemon.id}</h2>
+        <img src="${pokemon.sprites.back_default}" alt="">
+        <p class="pokeName">${pokemon.name}</p>
+        <div class="stats__main__container">
+            <div class="stats__container">
+                <div class="pokeStatTitle">Attack Base Stats</div>
+                <span class="pokeAttackStat">45</span>
+            </div>
+
+            <div class="stats__container">
+                <div class="pokeStatTitle">Attack Base Stats</div>
+                <span class="pokeAttackStat">45</span>
+            </div>
+
+            <div class="stats__container">
+                <div class="pokeStatTitle">Attack Base Stats</div>
+                <span class="pokeAttackStat">45</span>
+            </div>
+
+            <div class="stats__container">
+                <div class="pokeStatTitle">Attack Base Stats</div>
+                <span class="pokeAttackStat">45</span>
+            </div>
+
+            <div class="stats__container">
+                <div class="pokeStatTitle">Attack Base Stats</div>
+                <span class="pokeAttackStat">45</span>
+            </div>
+
+            <div class="stats__container">
+                <div class="pokeStatTitle">Attack Base Stats</div>
+                <span class="pokeAttackStat">45</span>
+            </div>
+        </div>
         <h2>${pokemon.id}</h2>
         <p>${pokemon.name}</p>
         <span>${pokemon.stats[0].base_stat}</span>

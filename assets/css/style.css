@@ -18,7 +18,6 @@ html {
 }
 
 body {
-  margin: 3rem 0 0 0;
   font-family: "Open Sans", sans-serif;
   font-size: "Open Sans", sans-serif;
   background-color: #FFF;
@@ -72,6 +71,7 @@ input {
           align-items: center;
   background-color: #121212;
   width: 100%;
+  z-index: 100;
 }
 
 .logo {
@@ -88,5 +88,97 @@ input {
 .hero {
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .bg__cover {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hero .container {
+  z-index: 100;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.hero .pokemon {
+  background: linear-gradient(45deg, #272822, #121212);
+  width: 230px;
+  height: 350px;
+  width: 100%;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero .pokeID {
+  color: #FFF;
+}
+
+.hero .pokeName {
+  color: #FFF;
+}
+
+.hero .stats__main__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.hero .stats__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero .pokeStatTitle {
+  color: #FFF;
+  font-size: 0.938rem;
+}
+
+.hero .pokeAttackStat {
+  color: #FFF;
 }
 /*# sourceMappingURL=style.css.map */
