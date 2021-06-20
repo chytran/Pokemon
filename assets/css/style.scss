@@ -79,7 +79,58 @@ ul {
     list-style-type: none;
 }
 
-li {
+a {
     text-decoration: none;
 }
 
+img, 
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input {
+    border: none;
+    font-size: $normalFontSize;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+.main-1 {
+    overflow-x: hidden;
+}
+
+/*====================== NAV =================================*/ 
+.nav__bar {
+    position: fixed;
+    height: $headerHeight;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $mainBlack;
+    width: 100%;
+}
+
+.logo {
+    color: $mainWhite;
+}
+
+/*====================== Container ===========================*/
+
+.main-1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+}
