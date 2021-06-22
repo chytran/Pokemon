@@ -8,7 +8,7 @@ const container = document.querySelector(".container");
 
 // Loop to get multiple pokemon
 const fetchPokemon = async () => {
-    for (let i = 1; i <= 1; i++){
+    for (let i = 1; i <= 151; i++){
         await getPokemon(i);
     }
 }
@@ -29,42 +29,39 @@ function pokeCard(pokemon){
 
     const poke = `
         <h2 class="pokeID">${pokemon.id}</h2>
-        <img src="${pokemon.sprites.back_default}" alt="">
+        <img src="${pokemon.sprites.front_default}" alt="">
         <p class="pokeName">${pokemon.name}</p>
         <div class="stats__main__container">
             <div class="stats__container">
-                <div class="pokeStatTitle">Attack Base Stats</div>
-                <span class="pokeAttackStat">45</span>
+                <div class="pokeStatTitle">${pokemon.stats[0].stat.name}</div>
+                <span class="pokeAttackStat">${pokemon.stats[0].base_stat}</span>
             </div>
 
             <div class="stats__container">
-                <div class="pokeStatTitle">Attack Base Stats</div>
-                <span class="pokeAttackStat">45</span>
+                <div class="pokeStatTitle">${pokemon.stats[1].stat.name}</div>
+                <span class="pokeAttackStat">${pokemon.stats[1].base_stat}</span>
             </div>
 
             <div class="stats__container">
-                <div class="pokeStatTitle">Attack Base Stats</div>
-                <span class="pokeAttackStat">45</span>
+                <div class="pokeStatTitle">${pokemon.stats[2].stat.name}</div>
+                <span class="pokeAttackStat">${pokemon.stats[2].base_stat}</span>
             </div>
 
             <div class="stats__container">
-                <div class="pokeStatTitle">Attack Base Stats</div>
-                <span class="pokeAttackStat">45</span>
+                <div class="pokeStatTitle">${pokemon.stats[3].stat.name}</div>
+                <span class="pokeAttackStat">${pokemon.stats[3].base_stat}</span>
             </div>
 
             <div class="stats__container">
-                <div class="pokeStatTitle">Attack Base Stats</div>
-                <span class="pokeAttackStat">45</span>
+                <div class="pokeStatTitle">${pokemon.stats[4].stat.name}</div>
+                <span class="pokeAttackStat">${pokemon.stats[4].base_stat}</span>
             </div>
 
             <div class="stats__container">
-                <div class="pokeStatTitle">Attack Base Stats</div>
-                <span class="pokeAttackStat">45</span>
+                <div class="pokeStatTitle">${pokemon.stats[5].stat.name}</div>
+                <span class="pokeAttackStat">${pokemon.stats[5].base_stat}</span>
             </div>
         </div>
-        <h2>${pokemon.id}</h2>
-        <p>${pokemon.name}</p>
-        <span>${pokemon.stats[0].base_stat}</span>
     `;
 
     pokeContainer.innerHTML = poke;
